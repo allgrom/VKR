@@ -1,0 +1,112 @@
+#:kivy 1.0.9 
+<MyPaintWidget>:
+  id:layout
+  canvas:
+    Rectangle:
+      id: rect
+      pos: 0, 0
+      source: ""
+      size: 0,0
+  Button:
+    id: BOpen
+    size: root.width / 5, 200 / 3
+    right: root.width / 5
+    top: root.height
+    text: "Open video file"
+    on_press: root.openVideoFile()
+  TextInput:
+    id: PathSaveFile
+    size: root.width / 5, 200 / 3
+    right: root.width / 5
+    top: root.height - self.size[1]
+    text: ""
+  Button:
+    id: BSave
+    size: root.width / 5, 200 / 3
+    right: root.width / 5
+    top: root.height - 2 * self.size[1]
+    text: "Save result in file"
+    on_press: root.SaveResult()
+  Button:
+    id: BNext
+    size: root.width / 5, 200
+    right: 2 * root.width / 5
+    top:root.height
+    text: "Next \n frame"
+    on_press:root.NextFrame()
+  Button:
+    id: BForest
+    size: root.width / 10, 200 / 3
+    right: 2.5 * root.width / 5
+    top: root.height
+    text: "Forest"
+    on_press: root.Forest23()
+  Button:
+    id: BIn
+    size: root.width / 10, 200 / 3
+    right: 2.5 * root.width / 5
+    top: root.height - self.size[1]
+    text: "In"
+    on_press: root.In23()
+  Button:
+    id: BOut
+    size: root.width / 10, 200 / 3
+    right: 2.5 * root.width / 5
+    top: root.height - 2 * self.size[1]
+    text: "Out"
+    on_press: root.Out23()
+  Button:
+    id: BStartFire
+    size: root.width / 10, 200 / 3
+    right: 3 * root.width / 5
+    top: root.height
+    text:"StartFire"
+    on_press: root.StartFire();
+  Button:
+    id: BFinishFire
+    size: root.width / 10, 200 / 3
+    right: 3 * root.width / 5
+    top: root.height - self.size[1]
+    text:"FinishFire"
+    on_press: root.FinishFire();
+  Label:  
+    id: LInfo
+    size: root.width / 10, 200 / 3
+    right: 3 * root.width / 5
+    top: root.height - 2 * self.size[1]
+    text: "?"
+  Button:
+    id: BDrawSmoke
+    size: root.width / 10, 200 / 2
+    right: 3.5 * root.width / 5
+    top: root.height
+    text: "Draw Smoke"
+    on_press: root.DrawSmoke()
+  Button:
+    id: BDrawFire
+    size: root.width / 10, 200 / 2
+    right: 3.5 * root.width / 5
+    top: root.height - self.size[1]
+    text: "Draw Fire"
+    on_press:root.DrawFire()
+  Button:
+    id: BCleanSmoke
+    size: root.width / 10, 200 / 2
+    right: 4 * root.width / 5
+    top: root.height
+    text: "Clean \nsmoke"
+    on_press: root.CleanSmoke()
+  Button:
+    id: BCleanFire
+    size: root.width / 10, 200 / 2
+    right: 4 * root.width / 5
+    top: root.height - self.size[1]
+    text: "Clean \nfire"
+    on_press:root.CleanFire()
+  Button:
+    id: BQuit
+    size: root.width / 5, 200
+    right: root.width
+    top:root.height
+    text: "Quit"
+    on_press:root.Quit()
